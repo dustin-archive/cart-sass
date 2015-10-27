@@ -1,0 +1,26 @@
+@function cart($map) {
+  $result: ();
+  $test-count: 0;
+  $pass-count: 0;
+
+  @for $i from 1 through length(map-keys($map)) {
+    $key: nth(map-keys($map), $i);
+    $test-count: $test-count + 1;
+    $values: map-get($map, $key);
+    $test: map-get($values, test);
+    $return: map-get($values, return);
+
+    @if $test == $return {
+      $result: append($result, $key $test + ' == ' + $return 'pass');
+      $pass-count: $pass-count + 1;
+    }
+    @else {
+      $result: append($result, $key $test + ' != ' + $return 'fail');
+    }
+  }
+
+  $header: '\a Cart Sass Testing. \a';
+  $footer: '\a #{$pass-count} out of #{$test-count} tests passed.';
+
+  @return $header + wood($result) + $footer;
+}
