@@ -1,0 +1,21 @@
+{
+  "name": "cart-sass",
+  "description": "",
+  "homepage": "https://github.com/dustindowell22/cart-sass",
+  "authors": [
+    "Dustin Dowell <dustindowell22@gmail.com>"
+  ],
+  "main": "scss/main.scss",
+  "keywords": [
+    "cart",
+    "test",
+    "css",
+    "sass",
+    "scss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ]
+}
