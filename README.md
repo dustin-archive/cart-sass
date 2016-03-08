@@ -1,2 +1,2 @@
 # cart-sass
-Test your sass.
+Test your Sass.
